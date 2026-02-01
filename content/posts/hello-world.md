@@ -9,18 +9,18 @@ categories:
 # See details front matter: https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter
 ---
 
-Welcome to Hugo FixIt! This is your very first post.
+欢迎使用 Hugo FixIt！这是您的第一篇文章。
 
 <!--more-->
 
-## Documentation
+## 文档
 
-Head to the documentation page linked below for a complete guidence to get started with the [FixIt](https://github.com/hugo-fixit/FixIt) theme.
+请前往下方链接的文档页面，获取开始使用 [FixIt](https://github.com/hugo-fixit/FixIt) 主题的完整指南。
 
 {{< fixit-docs-bookmark >}}
 
-## Feedback
+## 反馈
 
-Whether it's questions, ideas, bugs or pull requests, all feedback is welcome!
+无论是问题、想法、错误报告还是拉取请求，欢迎任何反馈！
 
-Head over to the [issues](https://github.com/hugo-fixit/FixIt/issues) or [discussions](https://github.com/hugo-fixit/FixIt/discussions) tracker.
+请前往 [issues](https://github.com/hugo-fixit/FixIt/issues) 或 [discussions](https://github.com/hugo-fixit/FixIt/discussions) 追踪器。

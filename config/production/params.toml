@@ -1,4 +1,4 @@
-description = "This is my new Hugo FixIt site"
+description = "This is my Blog"
 keywords = ["Hugo", "FixIt"]
 
 [author]
@@ -8,7 +8,7 @@ link = "https://github.com/Lruihao"
 avatar = "https://lruihao.cn/images/avatar.jpg"
 
 [app]
-title = "Hugo FixIt Blog"
+title = "Zhibin Yang's Blog"
 
 [header]
 
