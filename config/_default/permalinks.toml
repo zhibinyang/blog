@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------------
 
 [page]
-posts = "/posts/:filename/"
+posts = "/:section/:slugorcontentbasename/"
 
 [section]
 posts = "/posts/"
