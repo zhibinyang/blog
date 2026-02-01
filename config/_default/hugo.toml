@@ -42,17 +42,19 @@ enableEmoji = true
 
 
 [params.page.comment]
-  enable = true
-  [params.page.comment.giscus]
+enable = true
+[params.page.comment.giscus]
     enable = true
     repo = "zhibinyang/blog"
     repoId = "R_kgDORF7SlA"
     category = "Announcements"
     categoryId = "DIC_kwDORF7SlM4C1vT_"
     mapping = "pathname"
+    strict = "0"
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
-    lazyLoading = true
-    darkTheme = "github_dark"
-    lightTheme = "github_light"
+    lazyLoad = true
+    lang = "en"
+    darkTheme = "dark"
+    lightTheme = "light"
