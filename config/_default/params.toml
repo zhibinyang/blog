@@ -1034,7 +1034,7 @@ Mix = false
 
 # FixIt 0.2.15 | CHANGED Comment config
 [page.comment]
-enable = false
+enable = true
 
 # FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
 [page.comment.artalk]
@@ -1179,22 +1179,20 @@ katex = false
 
 # FixIt 0.2.14 | NEW Giscus comments config
 [page.comment.giscus]
-enable = false
-repo = ""
-repoId = ""
-category = ""
-categoryId = ""
-mapping = ""
-origin = "https://giscus.app" # FixIt NEW | 0.3.7 Or set it to your self-hosted domain
-strict = "0" # FixIt NEW | 0.2.18
-term = ""
+enable = true
+repo = "zhibinyang/blog"
+repoId = "R_kgDORF7SlA"
+category = "Announcements"
+categoryId = "DIC_kwDORF7SlM4C1vT_"
+mapping = "pathname"
+strict = "0"
 reactionsEnabled = "1"
 emitMetadata = "0"
-inputPosition = "bottom" # ["top", "bottom"]
-lang = ""
-lightTheme = "light"
-darkTheme = "dark"
+inputPosition = "bottom"
 lazyLoad = true
+lang = "en"
+darkTheme = "dark"
+lightTheme = "light"
 
 # Third-party library config
 [page.library]

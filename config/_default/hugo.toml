@@ -39,22 +39,3 @@ enableEmoji = true
 # if set, the MainSections method on the Site object returns the given sections,
 # otherwise it returns the section with the most pages.
 # mainSections = ["posts"]
-
-
-[params.page.comment]
-enable = true
-[params.page.comment.giscus]
-    enable = true
-    repo = "zhibinyang/blog"
-    repoId = "R_kgDORF7SlA"
-    category = "Announcements"
-    categoryId = "DIC_kwDORF7SlM4C1vT_"
-    mapping = "pathname"
-    strict = "0"
-    reactionsEnabled = "1"
-    emitMetadata = "0"
-    inputPosition = "bottom"
-    lazyLoad = true
-    lang = "en"
-    darkTheme = "dark"
-    lightTheme = "light"
