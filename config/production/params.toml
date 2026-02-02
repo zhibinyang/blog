@@ -23,4 +23,9 @@ enable = true
 [customPartials]
 head = [
   "inject/fixit-docs-bookmark.html",
+  "inject/gtm-head.html"
+]
+
+assets = [
+  "inject/gtm-body.html"
 ]
