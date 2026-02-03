@@ -29,3 +29,7 @@ head = [
 assets = [
   "inject/gtm-body.html"
 ]
+
+postFooterBefore = [
+  "inject/ad-footer-display.html"
+]
