@@ -10,6 +10,7 @@ on:
       - 'data/**'
       - 'static/**'
       - 'themes/**'
+      - 'layouts/**'
       - 'go.mod'
       - 'go.sum'
   workflow_run:
