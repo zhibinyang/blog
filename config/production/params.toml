@@ -33,3 +33,7 @@ assets = [
 postFooterBefore = [
   "inject/ad-footer-display.html"
 ]
+
+postTocAfter = [
+  "inject/ad-content-video.html"
+]
