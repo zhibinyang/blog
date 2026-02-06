@@ -11,6 +11,8 @@ categories:
 - measurement
 comment: true
 ---
+> In the "post-cookie" era, traditional attribution is fading. Bayesian Marketing Mix Modeling (MMM) has emerged as the gold standard, blending expert priors with data to quantify true incremental impact. This guide deconstructs its statistical soul—from priors to saturation curves—empowering you to master marketing ROI amidst uncertainty.
+
 
 ## 1. Core Philosophy: From "Regression" to "Causal Inference"
 

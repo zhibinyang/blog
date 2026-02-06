@@ -14,7 +14,7 @@ defaultContentLanguage = "zh-cn"
 # Do Not add url prefix for default language
 defaultContentLanguageInSubdir = false
 # whether to include Chinese/Japanese/Korean
-hasCJKLanguage = false
+hasCJKLanguage = true
 
 [languages]
   [languages.zh-cn]
