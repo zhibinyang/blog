@@ -2,3 +2,31 @@
 // Custom style
 // 自定义样式
 // ==============================
+
+// 增加正文段落间距，提升阅读体验
+.content {
+    p {
+        margin-bottom: 1.8em; // 增大段落间距
+        line-height: 1.8; // 适当增加行高
+    }
+
+    // 同时也调整列表的间距，保持一致性
+    ul,
+    ol {
+        margin-bottom: 1.5em;
+
+        li {
+            margin-bottom: 0.5em;
+        }
+    }
+
+    // 增加标题与上方段落的距离，优化视觉呼吸感
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 2.5em;
+        margin-bottom: 1em;
+    }
+}
