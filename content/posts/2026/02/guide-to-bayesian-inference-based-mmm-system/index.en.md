@@ -1,6 +1,6 @@
 ---
 title: Guide to Bayesian Inference based MMM System
-date: 2025-02-06T17:30:13+08:00
+date: 2026-02-06T17:30:13+08:00
 tags:
 - adtech
 - mmm

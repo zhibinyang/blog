@@ -1,6 +1,6 @@
 ---
 title: 'Paradox Theatre: Orchestrating High-Tension AI Debates with n8n'
-date: 2025-01-27T10:13:11+08:00
+date: 2026-01-27T10:13:11+08:00
 tags:
 - n8n
 - ai

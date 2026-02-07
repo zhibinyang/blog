@@ -1,6 +1,6 @@
 ---
 title: 'Getting Started with n8n: Node.js Development Gotchas'
-date: 2025-01-14T12:01:34+08:00
+date: 2026-01-14T12:01:34+08:00
 tags:
 - n8n
 - ai

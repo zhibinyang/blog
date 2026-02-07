@@ -1,6 +1,6 @@
 ---
 title: 2026 AdTech Full-link Experiment Proposal
-date: 2025-01-29T15:06:11+08:00
+date: 2026-01-29T15:06:11+08:00
 tags:
 - adtech
 - adserver
