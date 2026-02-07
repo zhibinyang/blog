@@ -1,0 +1,39 @@
+<a href="javascript:void(0);" class="follow-qr-trigger"
+    style="text-decoration: underline; color: #1a73e8; cursor: pointer;" onclick="triggerQRTracking()">
+    {{ .Get "text" | default "关注公众号「节点解剖室」" }}
+</a>
+
+<div id="qr-modal" class="qr-modal-overlay" onclick="hideQRModal()"
+    style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; z-index: 10000;">
+    <div class="qr-modal-content" onclick="event.stopPropagation()"
+        style="background: #fff; padding: 16px; border-radius: 12px; text-align: center; position: relative; max-width: 320px;">
+        <span style="position: absolute; right: 15px; top: 10px; cursor: pointer; font-size: 28px;"
+            onclick="hideQRModal()">&times;</span>
+        <h4 style="margin-bottom: 0px; color: #333;">扫码关注，深度解剖节点</h4>
+        <img src='{{ .Get "src" }}' alt="WeChat QR Code" style="width: 100%; height: auto; margin-top: 0px;">
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">点击遮罩区域可关闭</p>
+    </div>
+</div>
+
+<script>
+    function triggerQRTracking() {
+        // 1. 显示弹窗
+        document.getElementById('qr-modal').style.display = 'flex';
+
+        // 2. 推送数据到 Data Layer
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'view_wechat_qr',  // 自定义事件名
+            'event_category': 'Engagement',
+            'event_label': 'WeChat_Follow_Popup',
+            'content_name': '{{ .Page.Title }}', // 当前文章标题
+            'content_slug': '{{ .Page.Slug | default .Page.File.BaseFileName }}' // 当前页面 Slug
+        });
+
+        console.log('DataLayer pushed: view_wechat_qr');
+    }
+
+    function hideQRModal() {
+        document.getElementById('qr-modal').style.display = 'none';
+    }
+</script>

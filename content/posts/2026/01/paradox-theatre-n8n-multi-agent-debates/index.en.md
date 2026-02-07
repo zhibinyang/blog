@@ -72,3 +72,5 @@ If you are also interested in how to use n8n to drive this kind of complex multi
 Attached overall flowchart:
 
 ![n8n-workflow](assets/n8n_workflow_intervew.jpg)
+
+{{< follow-qr text="Scan to follow 'Node Autopsy Room' Official Account" src="/posts/paradox-theatre-n8n-multi-agent-debates/assets/node-quest-qr-code.jpg" >}}

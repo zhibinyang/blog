@@ -72,3 +72,7 @@ comment: true
 附整体流程图：
 
 ![n8n-workflow](assets/n8n_workflow_intervew.jpg)
+
+关注公众号查看生成案例:
+
+{{< follow-qr text="点我关注'节点解剖室'公众号" src="/posts/paradox-theatre-n8n-multi-agent-debates/assets/node-quest-qr-code.jpg" >}}
