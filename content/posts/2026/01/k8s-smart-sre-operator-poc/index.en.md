@@ -102,3 +102,5 @@ Many people ask, why not use Go for cloud-native?
 `k8s-smart-sre-operator` demonstrates a possibility: future ops automation won't be about hard-coding a bunch of `if pod.status == 'Error'`, but about teaching AI how to troubleshoot like a human.
 
 We are moving from **Automated Ops** to **Agentic Ops**. In this process, the Operator is no longer a script-executing machine, but the neural center connecting the AI brain to the infrastructure limbs.
+
+{{< github-link link="https://github.com/zhibinyang/k8s-smart-sre-operator" text="View Project on GitHub" >}}

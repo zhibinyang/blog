@@ -1,0 +1,26 @@
+{{ $link := .Get "link" }}
+{{ $title := .Page.Title }}
+{{ $text := .Get "text" | default "View on GitHub" }}
+
+<a href="{{ $link }}" target="_blank" class="github-link-trigger" data-repo="{{ $link }}" data-title="{{ $title }}"
+    onclick="trackGitHubClick(this)" style="text-decoration: underline; color: #1a73e8; cursor: pointer;">
+    {{ $text }}
+</a>
+
+<script>
+    if (typeof trackGitHubClick === 'undefined') {
+        window.trackGitHubClick = function (element) {
+            var link = element.getAttribute('data-repo');
+            var title = element.getAttribute('data-title');
+
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    'event': 'github_click',
+                    'github_repo_link': link,
+                    'article_title': title
+                });
+                console.log('DataLayer pushed: github_click', { link: link, title: title });
+            }
+        }
+    }
+</script>

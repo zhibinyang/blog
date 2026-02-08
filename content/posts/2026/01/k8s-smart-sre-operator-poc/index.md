@@ -102,3 +102,5 @@ Operator 会把这些信息回写到 `DiagnosticReport` status 里，并将状�
 `k8s-smart-sre-operator` 展示了一种可能：未来的运维自动化，不再是写死一堆 `if pod.status == 'Error'`，而是教会 AI 怎么像人一样去查问题。
 
 我们正在从 **Automated Ops**（自动化运维）迈向 **Agentic Ops**（智能体运维）。在这个过程里，Operator 不再是执行脚本的机器，而是成为了连接 AI 大脑和基础设施肢体的神经中枢。
+
+{{< github-link link="https://github.com/zhibinyang/k8s-smart-sre-operator" text="在Github上查看项目" >}}
