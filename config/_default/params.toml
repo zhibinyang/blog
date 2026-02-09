@@ -493,7 +493,7 @@ fontFamily = "inherit"
 # FixIt 0.3.10 | NEW Busuanzi count
 [busuanzi]
 # whether to enable busuanzi count
-enable = false
+enable = true
 # busuanzi count core script source. Default is https://vercount.one/js
 source = "https://vercount.one/js"
 # whether to show the site views

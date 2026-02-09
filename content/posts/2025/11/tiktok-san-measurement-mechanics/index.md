@@ -3,10 +3,8 @@ title: "我的广告费去哪了？揭秘 TikTok 那个被称为“SAN”的神�
 date: 2025-11-17T08:00:00+08:00
 tags:
 - tiktok
-- ads
+- adtech
 - measurement
-- pixel
-- san
 categories:
 - marketing
 - adtech
