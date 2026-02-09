@@ -106,19 +106,51 @@ AI 采取了"夹逼法"（Side Logic）：
 ```javascript
 // 伪代码：Side Decision Node
 function analyzeSide(supplyLoss, demandLoss) {
+    // 模糊推断：当没有足够的数据支持精细化判断时，使用更宽泛的表（置信区间）
     if (demandLoss.share > 0.9) {
-        // 案子在需求侧，继续查 DSP 和 Deal
+        if (isBeeswax(demandLoss.dspId)) {
+             // 端到端排查：如果怀疑是 Beeswax (FreeWheel DSP)，直接调用 Beeswax Agent 查数
+            return nextStep('analyze_beeswax_end_to_end');
+        }
         return nextStep('analyze_demand_side');
-    } else if (supplyLoss.share > 0.9) {
-         // 案子在供给侧，查页面和广告位
-        return nextStep('analyze_supply_side');
+    } 
+    
+    // 置信度判断
+    if (supplyLoss.share > 0.9) {
+        const confidence = calculateConfidence(supplyLoss);
+        // 如果 Bid Request 也随之减少，说明必须是上游问题 -> High Confidence
+        if (confidence === 'high') {
+             return report('High Confidence Supply Issue');
+        }
+        // 否则可能是填充率问题 -> Medium Confidence
+        return nextStep('analyze_supply_side_further');
     }
 }
 ```
 
+### 3. 名侦探的直觉：模糊推断与置信度 (Fuzzy Inference & Confidence)
+
+在现实世界中，线索往往是断断续续的。有时候我们查不到 "Deal A 在 URL B 上的表现"，因为数据太稀疏了。
+
+这时候，AI 会采用**模糊推断（Fuzzy Inference）**：
+*   **宽泛数据源**：如果 Deal 维度的数据不够，它会退而求其次，查看 "DSP + URL" 甚至 "DSP 全局" 的数据。
+*   **置信度分级（Confidence Level）**：
+    *   **High Confidence**：如果 Bid Request（请求量）和 Impression（展示量）同时暴跌，这几乎肯定是上游没发请求，或者是被某个过滤器拦住了。AI 会直接结案。
+    *   **Medium Confidence**：如果只有 Impression 跌了，但请求量正常。这可能是竞价逻辑变了，也可能是素材加载慢了。AI 会标记为 "中置信度"，并建议人类介入复核。
+
+### 4. 端到端全链路：Beeswax 联动
+
+广告系统最怕"踢皮球"。Supply 说没量，Demand 说没收到请求。
+
+因为 FreeWheel 同时拥有 Beeswax (DSP)，我的 Agent 拥有了**端到端（End-to-End）**的视野。当 Side Logic 怀疑是 Beeswax 的问题时，它不会只报一个 "Demand Issue"，而是直接切入 Beeswax 的数据库：
+*   "查一下这个 Line Item 在 Beeswax 侧是不是投不动了？"
+*   "是不是 Beeswax 的 Targeting 设置把流量过滤了？"
+
+这直接打通了广告投放的"任督二脉"。
+
 这完全就是资深 SRE 的直觉代码化。
 
-### 3. 时间机器：寻找作案动机 (Change History)
+### 5. 时间机器：寻找作案动机 (Change History)
 
 *（注：这部分功能在实际项目中是一个独立的模块，但在逻辑上它是整个 AIOps 闭环的最后一块拼图）*
 

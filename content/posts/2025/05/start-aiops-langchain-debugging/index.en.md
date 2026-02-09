@@ -106,19 +106,51 @@ The AI adopts a "Side Logic" approach:
 ```javascript
 // Pseudocode: Side Decision Node
 function analyzeSide(supplyLoss, demandLoss) {
+    // Fuzzy Inference: When specific data is insufficient, use broader tables (Confidence Intervals)
     if (demandLoss.share > 0.9) {
-        // Case is on Demand Side, continue checking DSP and Deal
+        if (isBeeswax(demandLoss.dspId)) {
+             // End-to-End Debugging: If Beeswax (FreeWheel DSP) is suspected, query Beeswax Agent directly
+            return nextStep('analyze_beeswax_end_to_end');
+        }
         return nextStep('analyze_demand_side');
-    } else if (supplyLoss.share > 0.9) {
-         // Case is on Supply Side, check Pages and Ad Slots
-        return nextStep('analyze_supply_side');
+    } 
+    
+    // Confidence Level Judgment
+    if (supplyLoss.share > 0.9) {
+        const confidence = calculateConfidence(supplyLoss);
+        // If Bid Request drops simultaneously, it must be an upstream issue -> High Confidence
+        if (confidence === 'high') {
+             return report('High Confidence Supply Issue');
+        }
+        // Otherwise, it might be a fill rate issue -> Medium Confidence
+        return nextStep('analyze_supply_side_further');
     }
 }
 ```
 
+### 3. Sherlock's Intuition: Fuzzy Inference & Confidence
+
+In the real world, clues are often fragmented. Sometimes we can't find data for "Deal A on URL B" because the data is too sparse.
+
+At this point, the AI adopts **Fuzzy Inference**:
+*   **Broader Data Sources**: If Deal-level data is insufficient, it settles for analyzing "DSP + URL" or even "DSP Global" data.
+*   **Confidence Levels**:
+    *   **High Confidence**: If **Bid Request** and **Impression** plummet simultaneously, it's almost certainly an upstream issue (no request received or blocked by a filter). The AI closes the case directly.
+    *   **Medium Confidence**: If only Impression drops but requests are normal. This could be a bidding logic change or slow creative loading. The AI marks it as "Medium Confidence" and suggests human review.
+
+### 4. End-to-End Visibility: Beeswax Integration
+
+The biggest fear in ad systems is "passing the buck". Supply says "no volume," and Demand says "no requests received."
+
+Since FreeWheel owns Beeswax (DSP), my Agent handles **End-to-End** visibility. When Side Logic suspects a Beeswax issue, it doesn't just report "Demand Issue" but queries the Beeswax database directly:
+*   "Check if this Line Item stopped spending on the Beeswax side?"
+*   "Did Beeswax Targeting settings filter out the traffic?"
+
+This bridges the gap between Supply and Demand, providing a complete picture.
+
 This is truly the intuition of a senior SRE codified.
 
-### 3. Time Machine: Finding the Motive (Change History)
+### 5. Time Machine: Finding the Motive (Change History)
 
 *(Note: This feature is a separate module in the actual project, but logically it is the final piece of the AIOps loop)*
 
