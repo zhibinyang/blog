@@ -13,7 +13,7 @@ keywords = ["Hugo", "FixIt"]
 [header]
 
 [header.title]
-logo = "logo/logo.png"
+logo = "/logo/logo.svg"
 
 [home]
 
