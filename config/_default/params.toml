@@ -297,8 +297,8 @@ paginate = 6
 
 # FixIt 0.2.16 | CHANGED Social config about the author
 [social]
-GitHub = ""
-Linkedin = ""
+GitHub = "zhibinyang"
+Linkedin = "zhibinyang"
 Twitter = ""
 Instagram = ""
 Facebook = ""

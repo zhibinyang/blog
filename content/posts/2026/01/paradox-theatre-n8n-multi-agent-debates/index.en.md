@@ -9,6 +9,7 @@ tags:
 categories:
 - ai
 comment: true
+featuredImagePreview: assets/cover-preview.jpg
 ---
 
 > Why are we obsessed with deep interviews and debate shows?
@@ -18,6 +19,8 @@ comment: true
 > Recently, in my "Node Autopsy Room", I built an automated workflow called **"Paradox Theatre"** using n8n. My instructions to it were simple: input a social hot topic, and it automatically casts roles, orchestrates scripts, and drives multiple AI Agents to complete a 12-minute, high-tension deep conversation.
 >
 > This is not a gentle seminar, but a carefully designed "Digital Shura Field" (battlefield).
+
+![cover](assets/cover.jpg)
 
 ## Act I: The Casting Director's "Scent of Humanity"
 

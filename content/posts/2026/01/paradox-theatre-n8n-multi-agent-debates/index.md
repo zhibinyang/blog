@@ -9,6 +9,7 @@ tags:
 categories:
 - ai
 comment: true
+featuredImagePreview: assets/cover-preview.jpg
 ---
 
 > 我们为什么痴迷于深度访谈和辩论节目？
@@ -18,6 +19,8 @@ comment: true
 > 最近，我在我的"节点解剖室"里，用 n8n 搭建了一个名为 **《矛盾剧场》** 的自动化工作流。我给它的指令很简单：输入一条社会热点新闻，它就能自动选角、编排脚本、并驱动多名 AI Agent 完成一场长达 12 分钟、剑拔弩张的深度对谈。
 >
 > 这不是一场温和的座谈会，而是一场精心设计的"数字修罗场"。
+
+![cover](assets/cover.jpg)
 
 ## 第一幕：选角导演的"人性嗅觉"
 
