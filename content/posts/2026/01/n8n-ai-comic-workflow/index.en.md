@@ -8,9 +8,12 @@ tags:
 categories:
 - ai
 comment: true
+featuredImagePreview: assets/cover-preview.jpg
 ---
 
 > Have you ever encountered this: you ask AI to draw a four-panel comic, but the protagonist "shapeshifts" in every panel, or key props vanish into thin air? AI has talent but no logic, like a genius with a seven-second memory. To solve this pain point, I gave up on going it alone and instead used n8n to assemble an "AI Director's Group" consisting of a Screenwriter, Visual Director, and Logic Reviewer. This article shares how I use a Multi-Agent workflow to truly teach AI to "use its brain" when drawing, achieving a qualitative leap in character consistency and narrative coherence.
+
+![cover](assets/cover.jpg)
 
 Previously, I saw someone in the Juejin community share an AI workflow for generating four-panel comics. It was a great idea, but when I actually ran it, I discovered a cliché problem: AI is talented but completely illogical.
 
