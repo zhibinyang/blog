@@ -2,15 +2,14 @@
 title: "从零开始：为了 AdTech Sandbox，我用 Expo 手搓了一个 App Storefront"
 date: 2026-02-11T23:23:04+08:00
 tags:
-- vendure
-- expo
+- measurement
 - react-native
 - adtech
 - ga4
-- sgtm
 categories:
 - adtech
-- mobile
+- measurement
+- coding
 comment: true
 featuredImagePreview: assets/cover-preview.jpg
 ---
