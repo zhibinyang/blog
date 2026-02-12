@@ -72,6 +72,8 @@ featuredImagePreview: assets/cover-preview.jpg
 
 上一张部署完成的图感受一下:
 
+{{< referrer-link link="https://storefront.zhibinyang.net" source="blog" medium="referrer" campaign="ecommerce_demo" content="inline_link" text="访问我的Qwik Storefront" >}}
+
 ![preview](assets/storefront-preview.jpg)
 
 有时候，完成比完美更重要，而免费且能跑通的方案，就是最好的方案。

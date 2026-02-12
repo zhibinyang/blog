@@ -72,6 +72,8 @@ Thus, my Vendure Web Storefront was complete. It has no database of its own, no 
 
 Here is a preview of the deployed site:
 
+{{< referrer-link link="https://storefront.zhibinyang.net" source="blog" medium="referrer" campaign="ecommerce_demo" content="inline_link" text="Visit My Qwik Storefront" >}}
+
 ![preview](assets/storefront-preview.jpg)
 
 Sometimes, done is better than perfect. And a free solution that works is the best solution.
