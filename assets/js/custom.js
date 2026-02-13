@@ -25,19 +25,22 @@ class FixItBlog {
     const parts = value.split(`; ${cookieName}=`);
     let uid = parts.length === 2 ? parts.pop().split(';').shift() : null;
 
+    // Derive top-level domain (e.g. .example.com)
+    const hostname = window.location.hostname;
+    const domainParts = hostname.split('.');
+    const domain = domainParts.length >= 2
+      ? `; domain=.${domainParts.slice(-2).join('.')}`
+      : '';
+
     if (!uid) {
       // Generate a random UUID
       uid = crypto.randomUUID
         ? crypto.randomUUID()
         : Math.random().toString(36).substring(2);
-      // Derive top-level domain (e.g. .example.com)
-      const hostname = window.location.hostname;
-      const domainParts = hostname.split('.');
-      const domain = domainParts.length >= 2
-        ? `; domain=.${domainParts.slice(-2).join('.')}`
-        : '';
-      document.cookie = `${cookieName}=${uid}; max-age=31536000; path=/${domain}; samesite=lax`;
     }
+
+    // Set or refresh the cookie with a sliding 1-year expiry on every visit
+    document.cookie = `${cookieName}=${uid}; max-age=31536000; path=/${domain}; samesite=lax`;
 
     window.__USER_UID = uid;
     console.log('1st-party UID:', uid);
