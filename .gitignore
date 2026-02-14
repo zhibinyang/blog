@@ -3,6 +3,7 @@ build/
 public/
 resources/
 
+.vscode
 .agent/
 .hugo_build.lock
 _vendor
