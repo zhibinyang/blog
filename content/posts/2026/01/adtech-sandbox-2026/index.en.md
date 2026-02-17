@@ -8,11 +8,15 @@ tags:
 categories:
 - adtech
 comment: true
+featuredImagePreview: assets/cover-preview.jpg
 ---
 
 
 > At the beginning of 2026, I plan to use the experience accumulated in my previous work, combined with my understanding of digital marketing, to build a complete digital marketing advertising delivery system.
 
+<!-- more -->
+
+![AdTech Ecosystem](assets/cover.jpg)
 
 ### 1. Core Architecture Composition
 

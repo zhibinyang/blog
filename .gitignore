@@ -3,6 +3,7 @@ build/
 public/
 resources/
 
+.DS_Store
 .vscode
 .agent/
 .hugo_build.lock

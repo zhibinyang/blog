@@ -8,11 +8,15 @@ tags:
 categories:
 - adtech
 comment: true
+featuredImagePreview: assets/cover-preview.jpg
 ---
 
 
 > 2026年开年，打算利用之前工作中积累的经验，结合对数字营销的理解，搭建一个完整的数字营销广告投放系统。
 
+<!--more-->
+
+![AdTech Ecosystem](assets/cover.jpg)
 
 ### 1. 核心架构组成
 

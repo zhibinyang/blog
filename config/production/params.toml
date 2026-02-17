@@ -24,6 +24,7 @@ enable = true
 head = [
   "inject/fixit-docs-bookmark.html",
   "inject/gtm-head.html",
+  "inject/adsense-head.html",
   "inject/baidu-verification.html"
 ]
 
