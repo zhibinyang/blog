@@ -28,7 +28,7 @@ featuredImagePreview: assets/cover-preview.jpg
 
 如果每个工具都去前端埋一遍点（SDK 乱炖），不仅会导致网页加载慢如牛车，还会造成极其严重的数据口径不一致——Facebook 认为是 A 买了，而 GA4 里却归因给了 B。
 
-**CDP（客户数据平台）**就是为了终结这种混乱而诞生的。它最核心的理念是：**数据只收集一次（Collect Once），然后分发到全网（Route Everywhere）**。而 RudderStack 则是在 CDP 这个赛道里异军突起的一匹黑马。
+**CDP（客户数据平台）** 就是为了终结这种混乱而诞生的。它最核心的理念是：**数据只收集一次（Collect Once），然后分发到全网（Route Everywhere）**。而 RudderStack 则是在 CDP 这个赛道里异军突起的一匹黑马。
 
 ## 2. 架构理念：为什么是 Warehouse-First？
 
