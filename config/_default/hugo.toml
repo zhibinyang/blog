@@ -16,17 +16,6 @@ defaultContentLanguageInSubdir = false
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage = true
 
-[languages]
-  [languages.zh-cn]
-    languageCode = "zh-CN"
-    languageName = "简体中文"
-    weight = 1 # The Smaller the higher
-
-  [languages.en]
-    languageCode = "en-US"
-    languageName = "English"
-    weight = 2
-
 # copyright description used only for seo schema
 copyright = ""
 # whether to use robots.txt
@@ -39,3 +28,14 @@ enableEmoji = true
 # if set, the MainSections method on the Site object returns the given sections,
 # otherwise it returns the section with the most pages.
 # mainSections = ["posts"]
+
+[languages]
+  [languages.zh-cn]
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    weight = 1 # The Smaller the higher
+
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    weight = 2
