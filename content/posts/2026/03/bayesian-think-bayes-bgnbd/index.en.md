@@ -11,9 +11,9 @@ comment: true
 featuredImagePreview: assets/cover-preview.jpg
 ---
 
-As a data practitioner frequently dealing with CLV (Customer Lifetime Value), invoking Lifetimes or PyMC-Marketing to run a BG/NBD model for predicting customer purchases has long been second nature. However, the more proficient I become at calling complex APIs to solve business problems, the more I sometimes feel a sense of emptiness—knowing the "what" but not entirely grasping the "why." We are accustomed to using MLE to tune and fit those obscure hyperparameters, but we often lack the opportunity to appreciate the elegant probabilistic intuition behind them.
-
-A while ago, during some downtime from optimizing an MMM (Media Mix Model), embracing the principle of "fast is slow," I opened Allen Downey's *Think Bayes 2* to review the fundamentals. It's a fantastic book that almost completely discards intimidating calculus, opting instead to reshape Bayesian thinking using hacker-style code. As the pages turned to Chapter 8—explaining the Poisson process by estimating the French national team's goal-scoring rate in the 2018 World Cup—I was struck by lightning: isn't the core of this seemingly unrelated sports prediction exactly the fundamental Bayesian soul of the BG/NBD model?
+> As a data practitioner frequently dealing with CLV (Customer Lifetime Value), invoking Lifetimes or PyMC-Marketing to run a BG/NBD model for predicting customer purchases has long been second nature. However, the more proficient I become at calling complex APIs to solve business problems, the more I sometimes feel a sense of emptiness—knowing the "what" but not entirely grasping the "why." We are accustomed to using MLE to tune and fit those obscure hyperparameters, but we often lack the opportunity to appreciate the elegant probabilistic intuition behind them.
+>
+> A while ago, during some downtime from optimizing an MMM (Media Mix Model), embracing the principle of "fast is slow," I opened Allen Downey's *Think Bayes 2* to review the fundamentals. It's a fantastic book that almost completely discards intimidating calculus, opting instead to reshape Bayesian thinking using hacker-style code. As the pages turned to Chapter 8—explaining the Poisson process by estimating the French national team's goal-scoring rate in the 2018 World Cup—I was struck by lightning: isn't the core of this seemingly unrelated sports prediction exactly the fundamental Bayesian soul of the BG/NBD model?
 
 <!--more-->
 
@@ -40,7 +40,7 @@ $$
 Translated into a more universal academic expression:
 
 $$
-\text{Posterior (后验)} \propto \text{Prior (先验)} \times \text{Likelihood (似然)}
+\text{Posterior} \propto \text{Prior} \times \text{Likelihood}
 $$
 
 When I applied this probability multiplication carrying a concrete physical meaning to the BG/NBD model, the previously esoteric mathematical formulas instantly became incredibly vivid.
