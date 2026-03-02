@@ -67,7 +67,7 @@ plt.grid(True, which="both", ls="-", alpha=0.1)
 plt.show()
 ```
 
-> **[Placeholder 1] 插入运行上述代码后生成的 P(Alive) vs. Expected LTV 散点四象限图截图。**
+![alive](assets/alive.png)
 
 **核心业务动作：**
 * **At Risk Whales（右下角）**：这些是曾经贡献巨大的大户，但现在的存活概率已经跌破阈值！策略是**立即抢救**，必须用最高级的资源（人工专属客服致电、大额无门槛神券）将其拉回。
@@ -121,7 +121,7 @@ plt.ylim(0, 100)
 plt.show()
 ```
 
-> **[Placeholder 2] 插入运行上述代码后生成的 Lorenz Curve 曲线截图。重点展示 Top 5% 客户贡献的比例标注。**
+![risk](assets/risk.png)
 
 **核心业务动作：**
 * **结构风险对冲**：如果你发现极其陡峭（比如前 5% 的人贡献了超过 50% 的未来预期价值），那你的业务存在极高的“大户依赖症”。必须建立起类似传统银行业的“私行 VIP 响应特权体系”。
@@ -190,7 +190,7 @@ plt.grid(True, which="both", ls="-", alpha=0.1)
 plt.show()
 ```
 
-> **[Placeholder 3] 插入运行上述代码后生成的双对数轴气泡矩阵截图。**
+![quantity](assets/quantity.png)
 
 **核心业务动作：**
 * **Whale Laggards（左上，单笔大户）**：痛点在**缺频次**。他们买得贵，但是买一次等半年。对策是做 Nudging，发送“专属周抛/月抛补充装订阅”或短效唤醒券，想办法强行缩短他们的回购周期。
