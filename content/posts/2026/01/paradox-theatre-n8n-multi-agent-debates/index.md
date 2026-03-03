@@ -20,6 +20,8 @@ featuredImagePreview: assets/cover-preview.jpg
 >
 > 这不是一场温和的座谈会，而是一场精心设计的"数字修罗场"。
 
+<!--more-->
+
 ![cover](assets/cover.jpg)
 
 ## 第一幕：选角导演的"人性嗅觉"
