@@ -72,7 +72,7 @@ To sort out this design, I set up and successfully ran a JSON isolation architec
 
 The general configuration looks like this (necessary path obfuscation has been applied):
 
-```json
+```jsonc
 {
   "tools": {
     "elevated": {
